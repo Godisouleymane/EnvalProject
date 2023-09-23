@@ -1,8 +1,9 @@
 body {
-    height: 80vh;
+    height: 100vh;
     justify-content: center;
     display: flex;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .container{
@@ -16,7 +17,8 @@ body {
 }
 
 .logo img {
-    width: 400px;
+    width: 300px;
+    margin: auto;
 }
 
 .titre {
@@ -35,7 +37,7 @@ body {
 }
 
 #input {
-    width: 500px;
+    width: 400px;
     height: 50px;
     border-radius: 7px;
     border: 1px solid  #8f8a8a;
@@ -59,15 +61,20 @@ body {
     margin-top: 10px;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+}
 .btn button {
     background-color:  #1898A8;
-    width: 500px;
+    width: 400px;
     height: 45px;
     border-radius: 7px;
     color: white;
     font-size: 20px;
     border: none;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .btn button:active {

@@ -13,17 +13,17 @@ body {
 }
 
 .logo img {
-    width: 400px;
+    width: 300px;
+    margin: auto;
 }
 
 .sidebar {
     background-color: white;
     width: 20%;
-    height: auto;
 }
 
 .sidebar_element {
-    overflow-y: scroll;
+
 }
 
 span {
@@ -35,8 +35,8 @@ span {
 }
 
 .list2 {
-   position: absolute;
-   bottom: 0;
+   /* position: absolute;
+   bottom: 0; */
 }
 
 ul li {
