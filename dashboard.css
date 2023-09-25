@@ -1,10 +1,14 @@
 body {
    background-color: #b9e3ec;
+   height: 100vh;
+   padding: 0;
+   margin: 0;
 }
 
 .container {
-   display: flex;
-   flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
 }
 
 .logo {
@@ -20,11 +24,8 @@ body {
 
 .sidebar {
     height: 100vh;
-    width: 300px;
+    width: 350px;
     background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
     overflow-y: auto;
 }
 
@@ -78,15 +79,15 @@ span {
 } */
 
 .section {
-    width: 80%;
+
 }
 
 .navbar {
     width: 99%;
-    margin-left: 1rem;
     background-color: white;
     justify-content: end;
     display: flex;
+    margin-left: 10px;
 }
 
 .nav img {
@@ -94,6 +95,9 @@ span {
     height: 50px;
 }
 
+.content {
+    width: 100vw;
+}
   /* .navbar {
     background-color: white;
     height: 60px;
@@ -106,9 +110,7 @@ span {
     padding: 0 20px;
 } */
 
-.section {
-    margin-left: 20%;
-} 
+
 .section-element {
     display: flex;
 }
@@ -278,7 +280,7 @@ svg circle:nth-child(1) {
 }
 
 
-
+/* 
 @media screen and (width:1440px){
 
     .container{
@@ -319,7 +321,7 @@ svg circle:nth-child(1) {
     }
     
     }
-    
+     */
 
 
 @media screen and (max-width:375px) {

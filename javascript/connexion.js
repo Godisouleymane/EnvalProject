@@ -27,8 +27,7 @@ function notification (element, titre, message) {
 let data = [
     {
       "email": "ssabiougodi@gmail.com",
-      "password": "mot de passe",
-      "reponseQuestionSecrete": "Nueve",
+      "password": "mot de passe"
     },
   ];
   localStorage.setItem("users", JSON.stringify(data));
@@ -39,7 +38,7 @@ buttonConnexion.addEventListener('click', function () {
     let password = passwordInput.value;
   
     if (email.trim() === '' || password.trim() === '') {
-      notification(cardNotification, "Alert", "Veuillez remplir tous les champs.")
+      notification(cardNotification, "Connexion", "Veuillez remplir tous les champs.");
       return;
     }
   
@@ -56,7 +55,7 @@ buttonConnexion.addEventListener('click', function () {
       tentatives--;
   
       if (tentatives === 0) {
-        notification(cardNotification, "Alert", "Votre compte est temporairement bloqué.");
+        notification(cardNotification, "Compte bloque", "Oups!!! Votre compte est temporairement bloqué.");
         setTimeout(function () {
           let reponse = prompt("Quel est le surnom de Souleymane ?");
           if (reponse === "Nueve") {
@@ -64,7 +63,7 @@ buttonConnexion.addEventListener('click', function () {
           } else {
             notification(cardNotification, "Alert", "Votre compte est définitivement bloqué.")
           }
-        }, 1000); // Attente de 5 secondes avant de poser la question
+        }, 3000); // Attente de 5 secondes avant de poser la question
       } else {
         notification(cardNotification, "Alert", `Données incorrectes. Il vous reste ${tentatives} tentatives.`)
       }
