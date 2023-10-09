@@ -26,18 +26,27 @@ function notification (element, titre, message) {
 // Enregistrement des données des utilisateurs dans le localStorage
 let data = [
     {
-      "email": "ssabiougodi@gmail.com",
-      "password": "mot de passe"
+      "userName": "Souleymane",
+      "password": "mot de passe",
+     
     },
+    {
+      "userName": "Sabiou",
+      "password":"mot de passe2"
+    },
+    {
+      "userName": "Godi",
+      "password":"mot de passe3"
+    }
   ];
   localStorage.setItem("users", JSON.stringify(data));
  
 // Vérifier si les champs sont vides
 buttonConnexion.addEventListener('click', function () {
-    let email = emailInput.value;
+    let identifiant = emailInput.value;
     let password = passwordInput.value;
   
-    if (email.trim() === '' || password.trim() === '') {
+    if (identifiant.trim() === '' || password.trim() === '') {
       notification(cardNotification, "Connexion", "Veuillez remplir tous les champs.");
       return;
     }
@@ -46,7 +55,7 @@ buttonConnexion.addEventListener('click', function () {
     let users = JSON.parse(localStorage.getItem("users")) || [];
   
     // Vérifier les données de l'utilisateur
-    let user = users.find(u => u.email === email && u.password === password);
+    let user = users.find(u => u.userName === identifiant && u.password === password);
   
     if (user) {
       // Rediriger vers la page d'accueil
