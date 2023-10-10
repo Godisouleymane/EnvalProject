@@ -16,43 +16,61 @@
     <label class="label2" for="check">
         <i class="fas fa-bars" id="btn"></i>
     </label>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="images/logo.png" alt="logo">
-        </div>
-        <div class="icons-top">
-            <a href="dashboard.html">
-                <i class="fa-solid fa-chart-simple"></i>
-                <span>Dashboard</span>
-            </a>
-            <a href="facture.html">
-                <i class="fa-solid fa-peace"></i>
-                <span>Facture</span>
-            </a>
-            <a href="commande.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Commande</span>
-            </a>
-            <a href="suivi.html">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span>Suivi</span>
-            </a>
-            <a href="service client.html">
-                <i class="fa-solid fa-comment-dots"></i>
-                <span>Service client</span>
-            </a>
-        </div>
-        <div class="icons-bottom">
-            <a href="#">
-                <i class="fa-solid fa-gear"></i>
-                <span>Parametre du compte</span>
-            </a>
-            <a href="index.html">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>                    <span>deconnexion</span>
-            </a>
-        </div>
-    </div>
-    <!-- fin de la sidebar -->
+       <div class="sidebar">
+            <div class="sidebar_element">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+              <div class="list">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="facture.html">
+                            <i class="fa-solid fa-peace"></i>
+                            <span>Facture</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="commande.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Commande</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="suivi.html">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Suivi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="service client.html">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <span>Service client</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list2">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Parametre du compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="connexion.html">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span>Deconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+       </div>
        <div class="section">
            <nav class="navbar">
                 <div class="nav">
@@ -79,83 +97,24 @@
                                 </div>
                             </th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th class="delete-bd-left commande">Comande</th>
+                        <tr  style="background-color: #1898A8; color: white;">
+                            <th class="delete-bd-left commande">Commande</th>
                             <th class="labo1">Laboratoire</th>
                             <th class="Date1">Date</th>
                             <th class="Status">Status</th>
                             <th class="rapport1">Cliquez pour voir le rapport</th>
                         </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td>Enval</td>
-                            <td>10/03/2023</td>
-                            <td class="td-color">En cours</td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td class="delete-bd-left">000112</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button>Voir</button></td>
-                        </tr>
+                       
+                    </thead>
+                    <tbody id="commandeTbody">
+                      
                     </tbody>
                 </table>
             </div>
            </div>
        </div>
    </div>
+   <script src="javascript/myArray.js"></script>
+   <script src="javascript/commande.js"></script>
 </body>
 </html>

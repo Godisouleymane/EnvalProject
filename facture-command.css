@@ -1,21 +1,16 @@
-
 .card {
+    width: 98%;
+    height: 80vh;
     background-color: white;
     margin-top: 3rem;
+    margin-left: 2rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.content {
-    width: 80%;
-    padding: 20px;
-}
-
-
 table {
-    /* width: 98%; */
-    padding-bottom: 20px !important;
-    height: 100vh;
+    width: 98%;
+    height: 70vh;
     margin: auto;
     text-align: center;
     border-collapse: collapse;
@@ -101,6 +96,7 @@ button:hover {
 }
 tbody tr:hover {
   background-color: #cccccc84;
+  color: #4A96A6;
 } 
 
 thead {
@@ -123,6 +119,10 @@ thead {
 }
 .rapport{
     width: 20%;
+}
+
+.statusColor {
+    color: #4A96A6;
 }
 
 
