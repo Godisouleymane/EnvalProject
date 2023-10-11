@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paramettre de compte</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Paramettre du compte</title>
 </head>
 <body>
-    
+    <div class="container">
+        <input type="checkbox" id="check">
+        <label class="label2" for="check">
+            <i class="fas fa-bars" id="btn"></i>
+        </label>
+        <div class="sidebar">
+            <div class="sidebar_element">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="active">
+                            <a href="dashboard.html">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="facture.html">
+                                <i class="fa-solid fa-peace"></i>
+                                <span>Facture</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="commande.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Commande</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="suivi.html">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Suivi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="service client.html">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>Service client</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="list2">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>Parametre du compte</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="connexion.html">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span>Deconnexion</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <nav class="navbar">
+                <div class="nav">
+                    <input type="checkbox" id="check">
+                    <label for="check">
+                        <i class="fas fa-bars" id="btn"></i>
+                    </label>
+                    <img class="icon-cloche" src="icons8-cloche-50.png" alt="Icon-cloche">
+                    <img src="images/avatar.jpg" alt="avatar">
+                </div>
+            </nav>
+            <div class="section-element-profile">
+              <h1 class="monTitre">Parametre du compte</h1>
+                <div class="tbord">
+                  <span class="tbord-span">
+                    <i class="fa-solid fa-arrow-left"></i>
+                     Retour au tableau de bord
+                  </span>
+                  <div class="parametreButtons">
+                    <button id="edit-password">Modifier le mot de passe</button>
+                    <button id="delete-profile">Supprimer le compte</button>
+                  </div>
+
+                </div>
+                <div class="">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
