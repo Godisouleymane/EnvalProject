@@ -53,3 +53,18 @@ barreSearch.addEventListener('input', () => {
     const searchText = barreSearch.value.toLowerCase();
     recherche(searchText);
 });
+
+
+const profileNavBar = document.getElementById('profile-navbar')
+
+function DOMContentLoaded() {
+    document.addEventListener('DOMContentLoaded', ()=> {
+        const imageUrl = localStorage.getItem('user-profile');
+        if (imageUrl) {
+            profileNavBar.setAttribute('src', imageUrl)
+        }
+    })
+    
+}
+
+DOMContentLoaded()
