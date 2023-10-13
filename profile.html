@@ -21,7 +21,7 @@
                 </div>
                 <div class="list">
                     <ul>
-                        <li class="active">
+                        <li class="">
                             <a href="dashboard.html">
                                 <i class="fa-solid fa-chart-simple"></i>
                                 <span>Dashboard</span>
@@ -54,8 +54,8 @@
                     </ul>
                     <div class="list2">
                         <ul>
-                            <li>
-                                <a href="#">
+                            <li class="active">
+                                <a href="profile.html">
                                     <i class="fa-solid fa-gear"></i>
                                     <span>Parametre du compte</span>
                                 </a>
@@ -80,7 +80,7 @@
                         <i class="fas fa-bars" id="btn"></i>
                     </label>
                     <img class="icon-cloche" src="icons8-cloche-50.png" alt="Icon-cloche">
-                    <img src="images/avatar.jpg" alt="avatar">
+                    <img id="profile-navbar" src="images/avatar.jpg" alt="avatar">
                 </div>
             </nav>
             <div class="section-element-profile">
@@ -96,11 +96,31 @@
                   </div>
 
                 </div>
-                <div class="">
-                    
+                <div class="section-info-user">
+                    <div class="info-user">
+                        <h1>Modifier profile</h1>
+                        <h2>Nom</h2>
+                        <input type="text" name="" id="" placeholder="Nom">
+                        <h2>Email</h2>
+                        <input type="text" name="" id="" placeholder="Email"> <br>
+                        <textarea name="" id="" cols="140" rows="30"></textarea> <br>
+                        <button id="send-button">Envoyer</button>
+                    </div>
+                    <div class="user-profile">
+                        <h1>Ton Avatar</h1>
+                        <div class="user-avatar">
+                            <img id="user-profile" src="images/avatar.jpg" alt="">
+                        </div>
+                        <div class="profile-button">
+                            <label id="edit-user-profile" for="choose-file">Modifier la photo</label>
+                            <input type="file" name="" id="choose-file" style="display: none;">
+                            <button id="delete-user-profile">Supprimer la photo</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+   <script src="javascript/profile.js"></script> 
 </body>
 </html>
