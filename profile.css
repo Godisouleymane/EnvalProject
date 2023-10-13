@@ -32,7 +32,9 @@
     gap: 100px;
 }
 
-#edit-password {
+#edit-password,
+#edit-user-profile,
+#send-button {
     background-color: #1898A8;
     border: 0;
     color: white;
@@ -44,13 +46,29 @@
     transition: all 0.3s ease;
 }
 
-#edit-password:hover {
+#send-button {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#edit-password:hover,
+#edit-user-profile:hover,
+#send-button:hover {
     background-color: white;
     border: 2px solid #1898A8;
     color: #1898A8;
 }
 
-#delete-profile {
+#edit-user-profile {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#delete-profile,
+#delete-user-profile {
     background-color: red;
     border: 0;
     color: white;
@@ -62,8 +80,54 @@
     transition: all 0.3s ease;
 }
 
-#delete-profile:hover {
+#delete-profile:hover,
+#delete-user-profile:hover {
     background-color: white;
     border: 2px solid red;
     color: red;
 }
+
+
+.section-info-user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.section-info-user h1, h2 {
+    color: gray;
+}
+
+.section-info-user input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+    border: none;
+    padding: 10px;
+}
+
+.section-info-user textarea {
+    margin-top: 20px;
+ 
+}
+
+
+
+.user-avatar img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+#profile-navbar,
+.icon-cloche {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+} 
