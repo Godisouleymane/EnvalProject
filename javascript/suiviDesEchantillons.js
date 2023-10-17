@@ -42,7 +42,7 @@ function recherche(searchText) {
         }
     })
     if (tbody.innerHTML === '') {
-        tbody.innerHTML =  `
+        tbody.innerHTML = `
         <tr>
         <td>Aucun element trouvé</td>
         </tr>
@@ -60,13 +60,13 @@ barreSearch.addEventListener('input', () => {
 const profileNavBar = document.getElementById('profile-navbar')
 
 function DOMContentLoaded() {
-    document.addEventListener('DOMContentLoaded', ()=> {
+    document.addEventListener('DOMContentLoaded', () => {
         const imageUrl = localStorage.getItem('user-profile');
         if (imageUrl) {
             profileNavBar.setAttribute('src', imageUrl)
         }
     })
-    
+
 }
 
 DOMContentLoaded()
@@ -75,18 +75,18 @@ DOMContentLoaded()
 const tableButton = document.querySelectorAll('.btn-table')
 
 tableButton.forEach(button => {
-    button.addEventListener('click', ()=> {
+    button.addEventListener('click', () => {
         let buttonId = button.dataset.id
         let trId = suiviDesEchantillonsArray[buttonId - 1]
-       
+
         if (trId.rapport === 'Disponible') {
             const buttonLink = document.querySelectorAll('#buttonLink');
             buttonLink.forEach(link => {
                 link.href = 'suividetail.html';
             });
             //  buttonLink.target = '_blank'
-             localStorage.setItem('trId', JSON.stringify(trId));
-        } 
+            localStorage.setItem('trId', JSON.stringify(trId));
+        }
     })
 });
 

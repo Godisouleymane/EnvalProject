@@ -55,7 +55,6 @@ function DOMContentLoaded() {
             profileNavBar.setAttribute('src', imageUrl)
         }
     })
-
 }
 
 DOMContentLoaded()
