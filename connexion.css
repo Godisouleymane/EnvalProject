@@ -116,21 +116,23 @@ body {
 
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:600px) {
     .container {
         max-width: 375px;
         margin: auto;
         font-size: 12px;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
     .logo img {
-        width: 300px;
+        width: 200px;
     }
     .input {
         justify-content: center;
         display: flex;
     }
 
-    .input #input {
+    .input #input-mail, #input-password {
        width: 250px;
        margin: auto;
     }
@@ -150,14 +152,13 @@ body {
         margin-left: 4rem;
     }
     .btn {
-        width: 375px;
-        justify-content: center;
-        display: flex;
+        width: 100%;
+       
         margin-top: 2rem;
     }
 
     .btn button {
-        width: 250px;
+        width: 100%;
         margin: auto;
     }
 
