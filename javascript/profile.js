@@ -5,6 +5,8 @@ const tbordSpan = document.querySelector('.tbord-span');
 const inputNameUser = document.getElementById('input-name-user');
 const inputEmailUser = document.getElementById('input-email-user');
 const biographieArea = document.getElementById('biographie');
+const sideBarIcon = document.querySelector('.fa-bars');
+const sideBar = document.querySelector('.sidebar')
 
 tbordSpan.addEventListener('click', () => {
     window.location = 'dashboard.html'
@@ -92,3 +94,11 @@ inputEmailUser.value = getEmailOfUser;
 inputNameUser.value = getNameOfUser;
 biographieArea.value = getBiographieOfUser;
 
+sideBarIcon.addEventListener('click', () => {
+    if (sideBar.style.display === "block") {
+        sideBar.style.display = "none"
+    } else {
+        sideBar.style.display = "block"
+    }
+
+})

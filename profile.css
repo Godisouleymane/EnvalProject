@@ -247,3 +247,95 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+
+@media screen and (max-width:600px) {
+
+    body {
+        margin: 0;
+    }
+
+    .active {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    .sidebar {
+        z-index: 999;
+        display: none;
+    }
+
+    .sidebar span,
+    .logo {
+        display: none;
+    }
+
+    .contenu {
+        z-index: -9999;
+        width: 100%;
+        overflow-x: hidden;
+        padding: 6px !important;
+    }
+
+    .tbord {
+        flex-direction: column;
+    }
+
+    .parametreButtons {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-info-user {
+        flex-direction: column;
+    }
+
+    .section-info-user textarea {
+        width: 100%;
+    }
+
+    .user-avatar {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .user-avatar img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-button {
+        margin-top: 20px;
+    }
+
+    .card-password {
+        width: 250px;
+        left: 50px;
+        top: 40px;
+    }
+
+    .header-card {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-card h1 {
+        font-size: 20px;
+    }
+
+    .header-card i {
+        font-size: 20px;
+    }
+
+    .body-card span {
+        font-size: 15px;
+    }
+
+}
