@@ -3,87 +3,81 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="facture-command.css">
     <link rel="stylesheet" href="dashboard.css">
-    <title>Facture</title>
+    <title>facture</title>
 </head>
 
 <body>
-    <div class="container">
-        <input type="checkbox"  id="check">
-        <label class="label2" for="check">
-            <i class="fas fa-bars" id="btn"></i>
-        </label>
-        <div class="sidebar">
-            <div class="sidebar_element">
-                <div class="logo">
-                    <img src="images/logo.png" alt="logo">
-                </div>
-                <div class="list">
-                    <ul>
-                        <li>
-                            <a href="dashboard.html">
-                                <i class="fa-solid fa-chart-simple"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="facture.html">
-                                <i class="fa-solid fa-peace"></i>
-                                <span>Facture</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="commande.html">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                <span>Commande</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="suivi.html">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <span>Suivi</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="service client.html">
-                                <i class="fa-solid fa-comment-dots"></i>
-                                <span>Service client</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="list2">
-                        <li>
-                            <a href="#">
-                                <i class="fa-solid fa-gear"></i>
-                                <span>Parametre du compte</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="connexion.html">
-                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                <span>Deconnexion</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="sidebar">
+        <div class="sidebar_element">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
             </div>
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="facture.html">
+                        <i class="fa-solid fa-peace"></i>
+                        <span>Facture</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="commande.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Commande</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="suivi.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="serviceClient.html">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Service client</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list2">
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Parametre du compte</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="connexion.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Deconnexion</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="section">
-            <nav class="navbar">
-                <div class="nav">
-                    <input type="checkbox"  id="check">
-                    <label for="check">
-                        <i class="fas fa-bars" id="btn"></i>
-                    </label>
-                    <img class="icon-cloche" src="icons8-cloche-50.png" alt="Icon-cloche">
-                    <img src="images/avatar.jpg" alt="avatar">
-                </div>
-            </nav>
+    </div>
+    <!-- fin de la sidebar -->
+    <div class="contenu">
+        <nav class="navbar">
+            <div class="sidebar-icon-card">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="">
+                <img class="icon-cloche" src="icons8-cloche-50.png" alt="Icon-cloche">
+                <img id="profile-navbar" src="images/avatar.jpg" alt="avatar">
+            </div>
+        </nav>
+        <section>
             <div class="card">
                 <div class="table">
                     <table>
@@ -93,12 +87,12 @@
                             </tr>
                             <tr>
                                 <th class="delete-bd-left one" colspan="4">
-                                   <h3 id="table-id">Facture</h3> 
+                                    <h3 id="table-id">Facture</h3>
                                     <div class="search-input">
                                         <input type="text" class="barre">
                                     </div>
                                 </th>
-                                   
+            
                             </tr>
                             <tr style="background-color: #1898A8; color: white;">
                                 <th class="delete-bd-left fact">Facture</th>
@@ -108,14 +102,14 @@
                             </tr>
                         </thead>
                         <tbody id="myTbody">
-                            
-                          
+            
+            
                         </tbody>
-                       
+            
                     </table>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <script src="javascript/myArray.js"></script>
     <script src="javascript/facture.js"></script>

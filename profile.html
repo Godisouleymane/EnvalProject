@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paramettre de compte</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>parametre de compte</title>
 </head>
+
 <body>
-    
+    <div class="card card-notification hidden">
+        <div class="card-header">
+            <h3 class="text-header"></h3>
+        </div>
+        <div class="card-body">
+            <h5 class="text-body"></h5>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar_element">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="facture.html">
+                        <i class="fa-solid fa-peace"></i>
+                        <span>Facture</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="commande.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Commande</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="suivi.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="serviceClient.html">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Service client</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list2">
+                <li class="active">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Parametre du compte</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="connexion.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Deconnexion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- fin de la sidebar -->
+    <div class="contenu">
+        <nav class="navbar">
+            <img class="icon-cloche" src="icons8-cloche-50.png" alt="Icon-cloche">
+            <img id="profile-navbar" src="images/avatar.jpg" alt="avatar">
+        </nav>
+        <section>
+        <div class="section-element-profile">
+            <h1 class="monTitre">Parametre du compte</h1>
+            <div class="tbord">
+                <span class="tbord-span">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Retour au tableau de bord
+                </span>
+                <div class="parametreButtons">
+                    <button id="edit-password" onclick="editPasswordFunction()">Modifier le mot de passe</button>
+                    <button id="delete-profile">Supprimer le compte</button>
+                </div>
+        
+            </div>
+            <div class="section-info-user">
+                <div class="info-user">
+                    <h1>Modifier profile</h1>
+                    <h2>Nom</h2>
+                    <input type="text" id="input-name-user" placeholder="Nom">
+                    <h2>Email</h2>
+                    <input type="text" id="input-email-user" placeholder="Email"> <br>
+                    <h2>Biographie</h2>
+                    <textarea name="" id="biographie"></textarea> <br>
+                    <button id="send-button" onclick="sendUserInfo()">Envoyer</button>
+                </div>
+                <div class="user-profile">
+                    <h1>Ton Avatar</h1>
+                    <div class="user-avatar">
+                        <img id="user-profile" src="images/avatar.jpg" alt="">
+                    </div>
+                    <div class="profile-button">
+                        <label id="edit-user-profile" for="choose-file">Modifier la photo</label>
+                        <input type="file" name="" id="choose-file" style="display: none;">
+                        <button id="delete-user-profile">Supprimer la photo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <div class="card-password hidden">
+        <div class="header-card">
+            <h1>Modifier le mot de passe</h1>
+            <i onclick="closeIconFunction()" id="close-icon" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="body-card">
+            <span class="card-span">Ancien mot de passe</span> <br>
+            <input type="text" id="old-password"> <br>
+            <span class="card-span">Nouveau mot de passe</span> <br>
+            <input type="text" id="new-password"> <br>
+            <span class="card-span">Confirmation</span> <br>
+            <input type="text" id="confirm-password"> <br>
+            <button onclick="sendButtonPasswordFunction()" class="send-button-password">Envoyer</button>
+        </div>
+    </div>
+    <script src="javascript/connexion.js"></script>
+    <script src="javascript/profile.js"></script>
 </body>
+
 </html>

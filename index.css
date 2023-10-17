@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+}
+
+.contenu {
+    width: 79%;
+    height: 100vh;
+    background-color: aqua;
+    overflow-y: scroll;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    height: 50px;
+}

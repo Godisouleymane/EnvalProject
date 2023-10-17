@@ -1,9 +1,8 @@
 body {
-    height: 100vh;
+    height: 80vh;
     justify-content: center;
     display: flex;
     align-items: center;
-    overflow-y: hidden;
 }
 
 .container{
@@ -17,8 +16,7 @@ body {
 }
 
 .logo img {
-    width: 300px;
-    margin: auto;
+    width: 400px;
 }
 
 .titre {
@@ -36,8 +34,9 @@ body {
     margin-left: 10px;
 }
 
-#input-mail, #input-password {
-    width: 400px;
+#input-mail,
+#input-password {
+    width: 500px;
     height: 50px;
     border-radius: 7px;
     border: 1px solid  #8f8a8a;
@@ -46,12 +45,12 @@ body {
     outline: none;
 }
 
-#input-mail:focus, #input-password:focus {
+#input:focus {
     border: 3px solid #79B51C;
 }
 
 .input2 {
-    margin-top: 40px;
+    margin-top: 50px;
     flex-direction: column;
     display: flex;
 }
@@ -61,25 +60,15 @@ body {
     margin-top: 10px;
 }
 
-.btn {
-    display: flex;
-    justify-content: center;
-}
 .btn button {
     background-color:  #1898A8;
-    width: 400px;
+    width: 500px;
     height: 45px;
     border-radius: 7px;
     color: white;
     font-size: 20px;
     border: none;
     margin-top: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn button:hover {
-    background-color: #0a4952;
 }
 
 .btn button:active {
@@ -97,7 +86,6 @@ body {
     position: absolute;
     right: 20px;
     top: 10px;
-   
 }
 
 .card-header {

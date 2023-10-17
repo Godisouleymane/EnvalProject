@@ -1,9 +1,6 @@
 .card {
-    /* width: 98%; */
-    /* height: 80vh; */
     background-color: white;
     margin-top: 3rem;
-    margin-left: 2rem;
     border-radius: 10px;
 }
 
@@ -12,21 +9,18 @@
     overflow-x: auto;
 }
 
-.mytable {
-    width: 98%;
-    margin: auto;
-}
 
 
 table thead tr th {
     border-bottom: 2px solid #8f8a8a;
-    text-align: center;
+    text-align: start;
     font-size: 30px;
     color: #8f8a8a;
     height: 50px;
 }
 
-tbody th, td {
+tbody th,
+td {
     text-align: center;
     border-left: 1px solid #8f8a8a;
     border-bottom: 1px solid #8f8a8a;
@@ -38,6 +32,7 @@ tbody th, td {
 .ligne-width {
     width: 20%;
 }
+
 .ligne-width1 {
     width: 18%;
 }
@@ -71,97 +66,69 @@ tbody tr:hover {
     background-color: #cccccc84;
 }
 
+.search-input {
+    padding-bottom: 10px;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: end;
+}
+
+
+input {
+    width: 23rem;
+    height: 3rem;
+    padding-left: 13px;
+    border: none;
+    background-color: #cccccc84;
+    background-image: url('icons8-sistrix.svg');
+    border-radius: 5px;
+    background-size: 2rem;
+    background-position: 1rem;
+    background-repeat: no-repeat;
+    outline: none;
+    padding-left: 55px;
+}
+
+input:focus {
+    border: 3px solid #79B51C;
+    background-image: url('icons8-sistrix (1).svg');
+}
+
+#profile-navbar,
+.icon-cloche {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+}
 
 
 
-@media screen and (width:1440px) {
+
+@media screen and (max-width:600px) {
+
+    .contenu {
+        z-index: -9999;
+        width: 100%;
+        overflow-x: hidden;
+        padding: 6px !important;
+    }
+
     .card {
-        margin-left: 4rem;
-        width: 96%;
-        margin-top: 1rem;
-        height: 90vh;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+        margin-top: 2rem;
     }
-   
-}
 
-
-@media screen and (max-width:375px) {
-    .container {
-        max-width: 375px;
-        margin: auto;
-        padding: 0;
+    tbody tr td {
+        font-size: 12px;
     }
-    span, .logo img {
-        display: none;
+
+    tbody tr th {
+        font-size: 12px;
     }
-   .active {
-       width: 30px;
-       padding-left: 0;
-   }
 
-   .sidebar {
-       width: 12%;
-       margin: 0;
-       padding: 0;
-       left: -12%;
-       position: fixed;
-       transition: all .5s;
-   }
-
-   ul   {
-       padding: 5px;
-       margin-top: 5rem;
-   }
-
-   .list2 {
-       margin-top: 18rem;
-   }
-
-   label #btn {
-       display: inline;
-       left: 20px;
-       top: 10px;
-   }
-
-   .label2 {
-    display: none;
-}
-
-   .navbar {
-       width: 105%;
-       margin-left: -90px;
-       position: fixed;
-       top: 0;
-   }
-
-   .card {
-    height: 110vh;
-       width: 360px;
-       margin-left: -4rem;
-       margin-top: 8rem;
-   }
-
-   tbody tr td {
-       font-size: 12px;
-   }
-
-   tbody tr th {
-       font-size: 12px;
-   }
-
-   .mytable {
-
-    width: 200%;
-   }
-
-   .btn-table{
-    height: 25px !important;
-    font-size: 12px;
-    width: 5rem;
-}
+    .btn-table {
+        height: 25px !important;
+        font-size: 12px;
+        width: 5rem;
+    }
 
 }

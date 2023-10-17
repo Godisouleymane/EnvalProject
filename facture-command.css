@@ -1,16 +1,13 @@
+
 .card {
-    width: 98%;
-    height: 80vh;
+    height: 100%;
     background-color: white;
     margin-top: 3rem;
-    margin-left: 2rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 table {
-    width: 98%;
-    height: 70vh;
     margin: auto;
     text-align: center;
     border-collapse: collapse;
@@ -29,11 +26,11 @@ table {
 
 thead tr {
     height: 70px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 tbody tr {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .td-color {
@@ -46,6 +43,7 @@ td,th{
     border-left: 1px solid #8f8a8a;
     border-bottom: 1px solid #8f8a8a;
 }
+
 input {
     width: 23rem;
     height: 3rem;
@@ -137,131 +135,91 @@ thead {
     width: 20em;
 }
 
+#profile-navbar,
+.icon-cloche {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+} 
 
 
-@media screen and (max-width:375px) {
-    .container {
-        max-width: 375px;
-        margin: auto;
-        padding: 0;
-    }
-    span, .logo img {
-        display: none;
-    }
-   .active {
-       width: 30px;
-       padding-left: 0;
-   }
+@media screen and (max-width:600px) {
 
-   .sidebar {
-       width: 12%;
-       margin: 0;
-       padding: 0;
-       left: -12%;
-       position: fixed;
-       transition: all .5s;
-   }
+    body {
+            margin: 0;
+        }
 
-   ul   {
-       padding: 5px;
-       margin-top: 5rem;
-   }
-
-   .list2 {
-       margin-top: 18rem;
-   }
-
-   label #btn {
-       display: inline;
-       left: 20px;
-       top: 10px;
-   }
-
-   .label2 {
-    display: none;
-}
-
-   .navbar {
-       width: 105%;
-       margin-left: -90px;
-       position: fixed;
-       top: 0;
-   }
-
-   .card {
-    height: 90vh;
-       width: 360px;
-       margin-left: -4rem;
-       margin-top: 8rem;
-   }
-
-   thead tr h3 {
-       text-align: center;
-   }
-
-   tbody tr {
-       font-size: 12px;
-   }
-
-
-   #table-id {
-       margin: 0;
-       margin-top: 9px;
-   }
-
-   .search-input {
-      margin: auto;
-       width: 300px;
-       margin-top: 10px;
-   }
-
-   table {
-       width: 200%;
-   }
-
-
-
-.rapport{
-    width: 150%;
-}
-
-button {
-    height: 25px !important;
-    font-size: 12px;
-    width: 5rem;
-}
-
-
-.commande {
-    width: 10rem;
-    height: 40px;
-}
-
-}
-
-
-
-@media screen and (width:1440px){
+        .active {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+    
+        .fa-bars {
+            display: block;
+        }
+    
+        .sidebar {
+            z-index: 999;
+            display: none;
+        }
+    
+        .sidebar span,
+        .logo {
+            display: none;
+        }
+    
+        .contenu {
+            z-index: -9999;
+            width: 100%;
+            overflow-x: hidden;
+            padding: 6px !important;
+        }
+  
     .card {
-        width: 94%;
-        margin-left: 4.3rem;
+        padding: 10px;
         margin-top: 2rem;
     }
-    tbody tr {
-        font-size: 16px;
+
+    thead tr h3 {
+        font-size: 25px !important;
+        text-align: center;
     }
-    input {
-        width: 13rem;
+
+    thead tr th {
+        font-size: 15px;
+    }
+
+    tbody tr {
+        font-size: 12px;
+    }
+
+
+    #table-id {
+        margin: 0;
+        margin-top: 9px;
+    }
+
+    .search-input {
+        margin: auto;
+        width: 300px;
+        margin-top: 10px;
+    }
+
+    .rapport{
+        width: 150%;
+    }
+
+    button {
+        height: 25px !important;
+        font-size: 12px;
+        width: 5rem;
+    }
+
+
+    .commande {
+        width: 10rem;
         height: 40px;
     }
-    
-    
-    }
-    
 
-    @media screen and (width:768px) {
-        .list2 ul {
-            margin-top: 21rem !important;
-        }
-        
-    }
+}

@@ -159,7 +159,7 @@ const suiviDesEchantillonsArray = [
         lot: 'TE202303001',
         etat: 'Reçu',
         date: '12/03/2023',
-        rapport: 'Disponnible'
+        rapport: 'Disponible'
 
     },
 
@@ -168,7 +168,7 @@ const suiviDesEchantillonsArray = [
         lot: 'E202302023',
         etat: 'Non Reçu',
         date: '12/03/2023',
-        rapport: 'Non Disponnible'
+        rapport: 'Non Disponible'
 
     },
 
@@ -178,7 +178,7 @@ const suiviDesEchantillonsArray = [
         lot: 'TE20230190',
         etat: 'Reçu',
         date: '14/03/2023',
-        rapport: 'Non Disponnible'
+        rapport: 'Non Disponible'
 
     },
 
@@ -188,7 +188,7 @@ const suiviDesEchantillonsArray = [
         lot: 'Carbonate',
         etat: 'Reçu',
         date: '14/03/2023',
-        rapport: 'Disponnible'
+        rapport: 'Disponible'
 
     },
 
@@ -198,7 +198,7 @@ const suiviDesEchantillonsArray = [
         lot: 'Chlourire',
         etat: 'Non Reçu',
         date: '15/03/2023',
-        rapport: 'Non Disponnible'
+        rapport: 'Non Disponible'
 
     },
 
@@ -208,7 +208,7 @@ const suiviDesEchantillonsArray = [
         lot: 'CO2 libre',
         etat: 'Reçu',
         date: '15/03/2023',
-        rapport: 'Disponnible'
+        rapport: 'Disponible'
 
     },
 
@@ -218,7 +218,7 @@ const suiviDesEchantillonsArray = [
         lot: 'Conductivité electrique',
         etat: 'Non Reçu',
         date: '15/03/2023',
-        rapport: 'Non Disponnible'
+        rapport: 'Non Disponible'
 
     },
 
@@ -228,7 +228,7 @@ const suiviDesEchantillonsArray = [
         lot: 'pH/Temperature',
         etat: 'Reçu',
         date: '16/03/2023',
-        rapport: 'Disponnible'
+        rapport: 'Disponible'
 
     },
 
@@ -238,7 +238,7 @@ const suiviDesEchantillonsArray = [
         lot: 'Couleur Brute',
         etat: 'Reçu',
         date: '17/03/2023',
-        rapport: 'Non Disponnible'
+        rapport: 'Non Disponible'
 
     },
 
@@ -247,7 +247,8 @@ const suiviDesEchantillonsArray = [
         lot: 'Cyanure libre',
         etat: 'Reçu',
         date: '20/03/2023',
-        rapport: 'Disponnible'
+        rapport: 'Disponible'
 
     },
 ]
+
