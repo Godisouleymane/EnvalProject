@@ -193,6 +193,10 @@
     color: #79B51C;
 }
 
+.fa-bars {
+    display: none !important;
+}
+
 
 .hidden {
     display: none;
@@ -284,7 +288,7 @@
     }
 
     .fa-bars {
-        display: block;
+        display: block !important;
     }
 
     .sidebar {
