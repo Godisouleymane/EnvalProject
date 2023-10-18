@@ -1,6 +1,6 @@
 
+
 .card {
-    height: 100%;
     background-color: white;
     margin-top: 3rem;
     border-top-left-radius: 10px;
@@ -8,7 +8,7 @@
 }
 
 table {
-    margin: auto;
+    width: 100%;
     text-align: center;
     border-collapse: collapse;
     color: #8f8a8a;
@@ -17,6 +17,8 @@ table {
 
 .table {
     overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 50px;
 }
 
 .card-tbody {
@@ -31,6 +33,10 @@ thead tr {
 
 tbody tr {
     font-size: 20px;
+}
+
+tbody tr td {
+    height: 60px;
 }
 
 .td-color {

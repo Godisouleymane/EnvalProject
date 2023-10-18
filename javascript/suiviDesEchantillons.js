@@ -84,7 +84,6 @@ tableButton.forEach(button => {
             buttonLink.forEach(link => {
                 link.href = 'suividetail.html';
             });
-            //  buttonLink.target = '_blank'
             localStorage.setItem('trId', JSON.stringify(trId));
         }
     })

@@ -69,7 +69,6 @@ function connectionButton() {
     return;
   }
 
- 
   // Vérifier les données de l'utilisateur
   let user = users.find(u => u.userName === identifiant && u.password === password);
 
@@ -90,7 +89,7 @@ function connectionButton() {
         } else {
           notification(cardNotification, "Alert", "Votre compte est définitivement bloqué.")
         }
-      }, 3000); // Attente de 5 secondes avant de poser la question
+      }, 3000); // Attente de 3 secondes avant de poser la question
     } else {
       notification(cardNotification, "Alert", `Données incorrectes. Il vous reste ${tentatives} tentatives.`)
     }
