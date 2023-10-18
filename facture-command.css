@@ -154,7 +154,7 @@ thead {
     body {
             margin: 0;
         }
-
+        
         .active {
             display: flex !important;
             align-items: center !important;
