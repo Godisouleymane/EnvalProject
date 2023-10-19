@@ -117,7 +117,9 @@
 .profile-button button {
     width: 100%;
 }
-.section-info-user h1, h2 {
+
+.section-info-user h1,
+h2 {
     color: gray;
 }
 
@@ -134,14 +136,14 @@
     width: 100%;
     height: 300px;
     margin-top: 20px;
- 
+
 }
 
 
 
 .user-avatar img {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
 }
 
@@ -155,7 +157,9 @@
     border-radius: 100%;
     height: 60px;
     width: 60px;
-} 
+    cursor: pointer;
+    padding-bottom: 10px !important;
+}
 
 .card {
     border: 1px solid black;
@@ -204,13 +208,13 @@
 
 .card-password {
     position: fixed;
-    right: 50%;
     left: 50%;
-    top: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border: 2px solid #1898A8;
-    width: 500px;
+    width: 25%;
     border-radius: 10px;
-    height: 400px;
+    height: 300px;
     overflow-y: scroll;
 }
 
@@ -230,6 +234,7 @@
 
 .header-card h1 {
     margin: 0;
+    font-size: 20px;
 }
 
 .header-card i {
@@ -363,5 +368,21 @@
     .body-card span {
         font-size: 15px;
     }
+
+    .info-user {
+        width: 100%;
+        margin: auto;
+    }
+
+    .user-profile {
+        margin: auto;
+        width: 100%;
+    }
+
+    .monTitre {
+        font-size: 25px;
+        padding-left: 0;
+    }
+
 
 }

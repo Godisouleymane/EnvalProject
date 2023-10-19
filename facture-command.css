@@ -37,6 +37,7 @@ tbody tr {
 
 tbody tr td {
     height: 60px;
+    text-align: center !important;
 }
 
 .td-color {
@@ -154,7 +155,7 @@ thead {
     body {
             margin: 0;
         }
-        
+
         .active {
             display: flex !important;
             align-items: center !important;
