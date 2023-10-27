@@ -80,12 +80,13 @@ body {
 
 .card {
     border: 1px solid black;
-    height: 100px;
-    width: 350px;
+    height: 15%;
+    width: 25%;
     text-align: center;
     position: absolute;
     right: 20px;
     top: 10px;
+    border-bottom: 1px solid black;
 }
 
 .card-header {
@@ -108,6 +109,8 @@ body {
     align-items: center;
     background-color: white;
     border-bottom: 1px solid black;
+    color: #79B51C;
+    border: 0;
 }
 
 .hidden {
@@ -161,5 +164,10 @@ body {
         width: 100%;
         margin: auto;
     }
+
+    .card-notification{
+        width: 50%;
+        right: 2%;
+    } 
 
 }

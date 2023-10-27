@@ -97,3 +97,9 @@ sideBarIcon.addEventListener('click', () => {
     }
 
 })
+
+const deconnexionButton = document.getElementById('deconnexionLink');
+
+deconnexionButton.addEventListener('click', () => {
+    localStorage.removeItem('userIsConnected')
+})

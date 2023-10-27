@@ -10,4 +10,10 @@ const profileNavBar = document.getElementById('profile-navbar')
       
   }
   
-  DOMContentLoaded()
+DOMContentLoaded()
+  
+const deconnexionButton = document.getElementById('deconnexionLink');
+
+deconnexionButton.addEventListener('click', () => {
+    localStorage.removeItem('userIsConnected')
+})

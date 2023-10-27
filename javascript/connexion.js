@@ -34,26 +34,26 @@ function notification (element, titre, message) {
 // Enregistrement des données des utilisateurs dans le localStorage
 let data = [
     {
-      "userName": "Souleymane",
-      "password": "mot de passe",
+      userName: "Souleymane",
+      password: "mot de passe",
      
     },
 
     {
-      "userName": "Sabiou",
-      "password":"mot de passe2"
+      userName: "Sabiou",
+      password:"mot de passe2"
     },
     
     {
-      "userName": "Godi",
-      "password":"mot de passe3"
+      userName: "Godi",
+      password:"mot de passe3"
     }
   ];
    // Récupérer les données de l'utilisateur depuis le localStorage
    let users = JSON.parse(localStorage.getItem("users")) || [];
 
   
-  if (!users) {
+  if (users == false) {
     localStorage.setItem("users", JSON.stringify(data));
   }
  
@@ -100,7 +100,7 @@ function connectionButton() {
 
 
 function editPasswordFunction() {
-  cardPassword.classList.remove('hidden')
+  cardPassword.classList.remove('hidden');
 }
 
 
@@ -121,7 +121,7 @@ function sendButtonPasswordFunction() {
     notification(cardNotification, "Modification du mot de passe", "Mot de passe modifié avec succes");
     setTimeout(() => {
       window.location.href = 'connexion.html'
-    }, 3000);
+    }, 2000);
   } else if (confirmPasswordInput.value !== newPasswordInput.value) {
     notification(cardNotification, "Echec de confirmation", "Le nouveau et la confirmation du mot de passe doivent etre identique")
   }

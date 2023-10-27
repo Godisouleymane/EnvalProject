@@ -25,6 +25,7 @@ function AfficherLesEleements(commandeArray) {
 }
 AfficherLesEleements(commandeArray)
 
+
 function recherche(searchText) {
   tbody.innerHTML = '';
   commandeArray.forEach(item => {
@@ -41,7 +42,8 @@ function recherche(searchText) {
     }
   })
   if (tbody.innerHTML === '') {
-    tbody.innerHTML = ` <tr>
+    tbody.innerHTML = `
+        <tr>
         <td>Aucun element trouvé</td>
         </tr>`
   }
@@ -105,4 +107,10 @@ sideBarIcon.addEventListener('click', () => {
     sideBar.style.display = "block"
   }
 
+})
+
+const deconnexionButton = document.getElementById('deconnexionLink');
+
+deconnexionButton.addEventListener('click', () => {
+  localStorage.removeItem('userIsConnected')
 })

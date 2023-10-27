@@ -6,7 +6,7 @@ const inputNameUser = document.getElementById('input-name-user');
 const inputEmailUser = document.getElementById('input-email-user');
 const biographieArea = document.getElementById('biographie');
 const sideBarIcon = document.querySelector('.fa-bars');
-const sideBar = document.querySelector('.sidebar')
+const sideBar = document.querySelector('.sidebar');
 
 tbordSpan.addEventListener('click', () => {
     window.location = 'dashboard.html'
@@ -101,4 +101,10 @@ sideBarIcon.addEventListener('click', () => {
         sideBar.style.display = "block"
     }
 
+})
+
+const deconnexionButton = document.getElementById('deconnexionLink');
+
+deconnexionButton.addEventListener('click', () => {
+    localStorage.removeItem('userIsConnected')
 })
