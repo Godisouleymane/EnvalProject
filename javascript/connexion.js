@@ -134,4 +134,3 @@ function closeIconFunction() {
   cardPassword.classList.add('hidden');
   notification(cardNotification, "Modification du mot de passe", "La modification a été anullée")
 }
-

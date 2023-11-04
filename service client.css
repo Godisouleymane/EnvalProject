@@ -1,10 +1,7 @@
 .contenue {
     background-color: white;
     border-radius: 10px;
-}
-
-.card {
-   
+    padding-bottom: 25px;
 }
 
 .input-title {
@@ -67,118 +64,16 @@
 } 
 
 
-
-@media screen and (width:1440px){
-    .contenu{
-        margin-left: 4rem;
-        width: 96%;
-        height: 87vh;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    }
-    .input-title {
-        padding: 10px;
-    }
-    #input-message {
-        height: 500px;
-    }
-}
-
-
-@media screen and (width:768px){
-    body {
-        margin: 0;
-    }
-    .container {
-        max-width: 768px;
-        margin: auto;
-        padding: 0;
-    }
-    span, .logo img {
-        display: none;
-    }
-    .active {
-        width: 50px !important;
-    }
-    .contenu {
-        margin-left: -3rem;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+@media screen and (max-width:600px) {
+    #input-sujet{
+        width: 60%;
     }
 
-    .input-title {
-        padding: 10px;
-    }
-    #input-message {
-        height: 500px;
+    .input-button {
+        height: 0px;
     }
 
-}
-
-
-@media screen and (max-width:375px) {
-    .container {
-        max-width: 375px !important;
-        margin: auto !important;
-        padding: 0 !important;
+    .contenue {
+        padding-bottom: 20px;
     }
-    span, .logo img {
-        display: none !important;
-    }
-   .active {
-       width: 30px !important;
-       padding-left: 0 !important;
-   }
-
-   .sidebar {
-       width: 12% !important;
-       margin: 0 !important;
-       padding: 0 !important;
-       left: -12% !important;
-       position: fixed !important;
-       transition: all .5s !important;
-   }
-
-   ul   {
-       padding: 5px !important;
-       margin-top: 5rem !important;
-   }
-
-   .list2 {
-       margin-top: 18rem !important;
-   }
-
-   label #btn {
-       display: inline !important; 
-       left: 20px !important;
-       top: 10px;
-   }
-
-   .label2 {
-    display: none !important;
-}
-
-   .navbar {
-       width: 105% !important;
-       margin-left: -90px !important;
-       position: fixed !important;
-       top: 0 !important;
-   }
-
-   .card-table {
-    height: 270vh;
-       width: 370px;
-       margin-left: -4rem;
-       margin-top: 8rem;
-   }
-
-   .page-title {
-       margin-top: 7rem;
-   }
-
-   
 }

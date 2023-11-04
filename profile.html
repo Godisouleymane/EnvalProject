@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <title>parametre de compte</title>
 </head>
 
@@ -139,10 +140,20 @@
             <input type="text" id="confirm-password"> <br>
             <button onclick="sendButtonPasswordFunction()" class="send-button-password">Envoyer</button>
         </div>
+       
     </div>
     <script src="javascript/connexion.js"></script>
     <script src="javascript/profile.js"></script>
     <script src="javascript/userConnected.js"></script>
+
+    <script>
+         tinymce.init({
+                selector: '#biographie',
+                // plugins: 'lists link image',
+                // toolbar: 'undo redo | bold italic | bullist numlist | link',
+            });
+    </script>
+    
 </body>
 
 </html>
