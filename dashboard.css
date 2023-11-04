@@ -265,7 +265,7 @@ svg circle:nth-child(1) {
 }
 
 .canvas-card {
-    width: 45vw;
+    width: 45%;
     margin-left: 7rem;
 }
 
@@ -293,6 +293,9 @@ svg circle:nth-child(1) {
     .sidebar span,
     .logo {
         display: none;
+    }
+    .list2 {
+        padding-bottom: 20px;
     }
 
     .contenu {
@@ -328,5 +331,9 @@ svg circle:nth-child(1) {
     .canvas-card,
     .barJs-title {
         margin-left: 0;
+    }
+
+    .canvas-card {
+        width: 90%;
     }
 }
