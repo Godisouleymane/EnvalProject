@@ -1,4 +1,4 @@
-const fileInput = document.getElementById("choose-file")
+const fileInput = document.getElementById("choose-file");
 const profileNavBar = document.getElementById('profile-navbar')
 const deleteProfile = document.getElementById('delete-user-profile')
 const tbordSpan = document.querySelector('.tbord-span');
@@ -7,6 +7,9 @@ const inputEmailUser = document.getElementById('input-email-user');
 const biographieArea = document.getElementById('biographie');
 const sideBarIcon = document.querySelector('.fa-bars');
 const sideBar = document.querySelector('.sidebar');
+const deleteCompte = document.getElementById('delete-profile');
+const sendUserInfoButton = document.getElementById('send-button');
+
 
 tbordSpan.addEventListener('click', () => {
     window.location = 'dashboard.html'
@@ -73,7 +76,7 @@ deleteProfile.addEventListener('click', () => {
 
 
 function sendUserInfo() {
-    if (inputEmailUser.value === "" || inputNameUser.value === ""  || biographieArea.value === "") {
+    if (biographieArea.value === "" || inputEmailUser.value === "" || inputNameUser.value === "") {
         notification(cardNotification, "Données perssonelles", "Veuillez renseigner tout les champs")
     } else {
         const inputEmailUserValue = inputEmailUser.value;
@@ -81,11 +84,15 @@ function sendUserInfo() {
         const biographieAreaVAlue = biographieArea.value;
         localStorage.setItem('nameOfUser', JSON.stringify(inputNameUserValue));
         localStorage.setItem('emailOfUser', JSON.stringify(inputEmailUserValue));
-        localStorage.setItem('biographieOfUser', JSON.stringify(biographieAreaVAlue))
+        localStorage.setItem('biographieOfUser', JSON.stringify(biographieAreaVAlue));
         notification(cardNotification, "Modification du profil", "La mise a jour a été effectué avec success")
     }
 
 }
+
+sendUserInfoButton.addEventListener('click', () => {
+    sendUserInfo();
+})
 
 const getNameOfUser = JSON.parse(localStorage.getItem('nameOfUser'));
 const getEmailOfUser = JSON.parse(localStorage.getItem('emailOfUser'));
@@ -107,4 +114,35 @@ const deconnexionButton = document.getElementById('deconnexionLink');
 
 deconnexionButton.addEventListener('click', () => {
     localStorage.removeItem('userIsConnected')
+})
+
+
+function deleteAccountUsers() {
+    const getUserConnected = JSON.parse(localStorage.getItem('userIsConnected'))
+    
+    const usersArray = JSON.parse(localStorage.getItem('users'))
+    
+    const userIndex = usersArray.findIndex(userIdx => userIdx.userName === getUserConnected.userName);
+    
+    if (userIndex !== -1) {
+        usersArray.splice(userIndex, 1);
+        notification(cardNotification, "Alert", "Votre compte a ete supprimer avec success");
+        localStorage.setItem("users", JSON.stringify(usersArray));
+        localStorage.removeItem('userIsConnected');
+        setTimeout(() => {
+            window.location.href = "connexion.html";
+        }, 2000);
+        
+    } else {
+        notification(cardNotification, "Alert", "Oupss!! utilisateur non trouver");
+    }
+}
+
+deleteCompte.addEventListener('click', () => {
+    const confirmation = confirm("Voulez vraiment supprimer ce compte ?");
+
+    if (confirmation) {
+        deleteAccountUsers()
+    }
+   
 })

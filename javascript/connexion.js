@@ -11,9 +11,41 @@ const oldPasswordInput = document.getElementById('old-password');
 const newPasswordInput = document.getElementById('new-password');
 const confirmPasswordInput = document.getElementById('confirm-password');
 const closeIcon = document.getElementById('close-icon');
+const cardCompteArebours = document.querySelector('.card-compte-Arebours')
+const timeContainer = document.getElementById('time-container');
 
-let compteARebours = null;
+
+if (!localStorage.getItem('decompte')) {
+  localStorage.setItem('decompte', 300)
+}
+let decompte = localStorage.getItem('decompte');
+console.log(decompte);
 let reponseQuestionSecrete;
+
+let checked = false;
+
+// Fonction pour mettre à jour le compte à rebours
+function timerFunction() {
+  // Décrémenter la durée du compte à rebours
+  decompte--;
+  localStorage.setItem('decompte', decompte)
+  var minutes = Math.floor(decompte / 60);
+  var seconds = decompte % 60;
+
+  // Affichage du compte à rebours dans l'élément avec l'ID "countdown"
+  timeContainer.innerHTML = minutes + "m: " + seconds + "s ";
+
+  // Si le compte à rebours est terminé, afficher un message
+  if (decompte <= 0) {
+    emailInput.disabled = false;
+    passwordInput.disabled = false;
+    cardCompteArebours.classList.add('hidden')
+    checked = false;
+    clearInterval(timerFunction())
+    localStorage.removeItem('decompte');
+  }
+  setTimeout(timerFunction, 1000);
+}
 
 
 function notification (element, titre, message) {
@@ -50,11 +82,10 @@ let data = [
     }
   ];
    // Récupérer les données de l'utilisateur depuis le localStorage
-   let users = JSON.parse(localStorage.getItem("users")) || [];
-
+  //  let users = JSON.parse(localStorage.getItem("users")) || [];
   
-  if (users == false) {
-    localStorage.setItem("users", JSON.stringify(data));
+if (!localStorage.getItem("users")) {
+    localStorage.setItem('users', JSON.stringify(data))
   }
  
 // Vérifier si les champs sont vides
@@ -68,9 +99,9 @@ function connectionButton() {
     notification(cardNotification, "Connexion", "Veuillez remplir tous les champs.");
     return;
   }
-
+  let getUsers = JSON.parse(localStorage.getItem("users")) || [];
   // Vérifier les données de l'utilisateur
-  let user = users.find(u => u.userName === identifiant && u.password === password);
+  let user = getUsers.find(u => u.userName === identifiant && u.password === password);
 
   if (user) {
     // Rediriger vers la page d'accueil
@@ -82,22 +113,44 @@ function connectionButton() {
 
     if (tentatives === 0) {
       notification(cardNotification, "Compte bloque", "Oups!!! Votre compte est temporairement bloqué.");
-      setTimeout(function () {
+      
         let reponse = prompt("Quel est le surnom de Souleymane ?");
-        if (reponse === "Nueve") {
-          window.location.href = "dashboard.html"
-        } else {
-          notification(cardNotification, "Alert", "Votre compte est définitivement bloqué.")
-        }
-      }, 3000); // Attente de 3 secondes avant de poser la question
+       setTimeout(() => {
+         if (reponse === "Nueve") {
+           window.location.href = "dashboard.html";
+         } else {
+           notification(cardNotification, "Alert", "Votre compte est définitivement bloqué.")
+           checked = true;
+           localStorage.setItem('checked', checked);
+           checkTimer()
+           buttonConnexion.disabled = true;
+          
+         }
+       }, 2000);
     } else {
       notification(cardNotification, "Alert", `Données incorrectes. Il vous reste ${tentatives} tentatives.`)
     }
   }
-
+  emailInput.value = "";
+  passwordInput.value = "";
 }
 
+function checkTimer() {
+  const getChecked = localStorage.getItem('checked')
+  if (getChecked) {
+    emailInput.disabled = true;
+    passwordInput.disabled = true;
+    setTimeout(() => {
+      cardCompteArebours.classList.remove('hidden')
+      timerFunction();
+      setTimeout(() => {
+        cardCompteArebours.classList.add('hidden')
+      }, 300 * 1000);
+    }, 1000);
+  }
+}
 
+checkTimer()
 
 function editPasswordFunction() {
   cardPassword.classList.remove('hidden');

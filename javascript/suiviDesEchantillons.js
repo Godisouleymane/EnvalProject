@@ -44,11 +44,12 @@ function recherche(searchText) {
     if (tbody.innerHTML === '') {
         tbody.innerHTML = `
         <tr>
-        <td>Aucun element trouvé</td>
+        <td colspan="4">Aucun element trouvé</td>
         </tr>
        `
     }
 }
+
 
 
 barreSearch.addEventListener('input', () => {
@@ -72,8 +73,8 @@ function DOMContentLoaded() {
 DOMContentLoaded()
 
 
-const tableButton = document.querySelectorAll('.btn-table')
-
+const tableButton = document.querySelectorAll('.btn-table');
+console.log(tableButton);
 tableButton.forEach(button => {
     button.addEventListener('click', () => {
         let buttonId = button.dataset.id

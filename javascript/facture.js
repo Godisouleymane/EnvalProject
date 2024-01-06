@@ -36,7 +36,7 @@ function recherche(searchText) {
     if (tbody.innerHTML === '') {
         tbody.innerHTML =  `
         <tr>
-        <td>Aucun element trouvé</td>
+        <td colspan="4">Aucun element trouvé</td>
         </tr>
        `
     }
@@ -44,6 +44,7 @@ function recherche(searchText) {
 
 
 barreSearch.addEventListener('input', () => {
+    
     const searchText = barreSearch.value.toLowerCase();
     recherche(searchText);
 });
@@ -62,6 +63,8 @@ function DOMContentLoaded() {
 }
 
 DOMContentLoaded()
+
+
 
 sideBarIcon.addEventListener('click', () => {
     if (sideBar.style.display === "block") {

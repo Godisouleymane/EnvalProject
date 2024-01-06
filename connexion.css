@@ -117,7 +117,9 @@ body {
     display: none;
 }
 
-
+#time-container {
+    font-size: 30px;
+}
 
 @media screen and (max-width:600px) {
     .container {

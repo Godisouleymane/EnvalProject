@@ -44,7 +44,7 @@ function recherche(searchText) {
   if (tbody.innerHTML === '') {
     tbody.innerHTML = `
         <tr>
-        <td>Aucun element trouvé</td>
+        <td colspan="5">Aucun element trouvé</td>
         </tr>`
   }
 }
